@@ -3,14 +3,15 @@ import express from 'express';
 import bodyParse from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 
-import schema from './schema';
+//import schema from './schema';
+import schema from './pg-schema';
 
 const app = express();
 
 app.use('/graphiql', graphiqlExpress({
-    endpointURL:  "/graphql"
+  endpointURL: "/graphql"
 }));
 
-app.use('/graphql', bodyParse.json(), graphqlExpress({schema}));
+app.use('/graphql', bodyParse.json(), graphqlExpress({ schema }));
 
 app.listen(4000, () => console.log("express server running on port 4000 "));
