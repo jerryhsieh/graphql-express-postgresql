@@ -12,8 +12,8 @@ const connectStr = {
   host: 'localhost',
   port: 5432,
   database: 'nodetest',
-  user: 'jerryhsieh',
-  password: 'jerry001'
+  user: 'xxxxx',
+  password: 'yyyyy'
 };
 
 const pgp = pgPromise({});
